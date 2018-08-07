@@ -11,7 +11,7 @@ namespace EntityFramework_ManyToMany.Relationship
         private readonly TOwnerEntity OwnerEntity;
         private ICollection<TJoinEntity> Collection;
 
-        public ICollection<TJoinEntity> GetCollection()
+        private ICollection<TJoinEntity> GetCollection()
         {
             if (Collection == null)
                 Collection = typeof(TOwnerEntity).GetProperties()
